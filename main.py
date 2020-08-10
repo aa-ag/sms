@@ -1,9 +1,9 @@
 import os
 import config
 
-def parse_words(file_path):
-    with open(file_path, 'r') as f:
-        line = f.readlines()[0]
+def parse_words(text):
+    with open(text, 'r') as text:
+        line = text.readlines()[0]
         words = line.split()
     return words
 
