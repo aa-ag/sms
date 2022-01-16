@@ -8,6 +8,9 @@ recipient = config.NUM
 
 ############------------ FUNCTION(S) ------------############
 def parse_words(text):
+    '''
+     opens text file and returns a list of words
+    '''
     with open(text, 'r') as text:
         line = text.readlines()[0]
         words = line.split()
@@ -15,6 +18,9 @@ def parse_words(text):
 
 
 def send_sms(num, msg):
+    '''
+     execytes scpt script which sends a msg to a recipient
+    '''
     os.system(f'osascript send.scpt {recipient} "{msg}"')
 
 
