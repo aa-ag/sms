@@ -16,6 +16,12 @@ def parse_words(text):
     return line
 
 
+def test_message_creation():
+    for i in range(1, 1000):
+        print(i)
+    return "test_message_creation is done running"
+
+
 def send_sms(num, msg):
     '''
      execytes scpt script which sends a msg to a recipient
@@ -25,5 +31,6 @@ def send_sms(num, msg):
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    messages = parse_words('text.txt')
-    send_sms(recipient, messages)
+    # messages = parse_words('text.txt')
+    message = test_message_creation()
+    send_sms(recipient, message)
