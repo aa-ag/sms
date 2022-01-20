@@ -11,10 +11,9 @@ def parse_words(text):
     '''
      opens text file and returns a list of words
     '''
-    with open(text, 'r') as text:
-        line = text.readlines()[0]
-        words = line.split()
-    return words
+    text = open(text, 'r')
+    line = text.readlines()[0]
+    return line
 
 
 def send_sms(num, msg):
@@ -27,5 +26,4 @@ def send_sms(num, msg):
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     messages = parse_words('text.txt')
-    for message in messages:
-        send_sms(recipient, message)
+    send_sms(recipient, messages)
